@@ -53,7 +53,7 @@ Se utilizó Claude para ayudarme con este proyecto. Para ser transparente:
 
 ## Link de la página
 
-https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/
+(https://github.com/TurkyMan007/rick-y-morty-api/tree/main)
 
 ## Autor
 
