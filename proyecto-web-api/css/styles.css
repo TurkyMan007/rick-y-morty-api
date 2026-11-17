@@ -1,0 +1,132 @@
+/* 
+   Estilos del proyecto "Archivo del Multiverso"
+   Se cargan después de Bootstrap para sobrescribir sus valores.
+    */
+
+/* ---------- Variables de diseño ---------- */
+:root {
+  --fondo: #e9eff1;       /* gris azulado claro */
+  --tinta: #14232b;       /* azul petróleo muy oscuro */
+  --portal: #39d98a;      /* verde portal (acento) */
+  --ambar: #f2b134;       /* estado "desconocido" */
+  --rojo: #d6504a;        /* estado "muerto" */
+  --superficie: #ffffff;
+}
+
+/* ---------- Base ---------- */
+body {
+  background-color: var(--fondo);
+  color: var(--tinta);
+  font-family: "DM Sans", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+  background-color: var(--tinta);
+  color: var(--fondo);
+  border-bottom: 6px solid var(--portal);
+}
+
+.cabecera__titulo {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.cabecera__texto {
+  max-width: 55ch;   /* línea corta para lectura cómoda */
+  margin-bottom: 0;
+  color: #b9c9cf;
+}
+
+/* ---------- Panel de filtros ---------- */
+.panel-filtros {
+  background-color: var(--superficie);
+  border: 2px solid var(--tinta);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--tinta);
+  box-shadow: 0 0 0 0.25rem rgba(57, 217, 138, 0.45);
+}
+
+/* ---------- Tarjetas de personaje ---------- */
+.tarjeta {
+  background-color: var(--superficie);
+  border: 2px solid var(--tinta);
+  border-radius: 6px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.tarjeta__imagen {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-bottom: 2px solid var(--tinta);
+}
+
+.tarjeta__cuerpo {
+  padding: 1rem;
+}
+
+.tarjeta__nombre {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.tarjeta__dato {
+  margin-bottom: 0.15rem;
+  font-size: 0.95rem;
+}
+
+/* Indicador de estado: punto de color + texto (no depende solo del color) */
+.estado {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+}
+
+.estado::before {
+  content: "";
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background-color: var(--ambar);
+}
+
+.estado--alive::before { background-color: var(--portal); }
+.estado--dead::before  { background-color: var(--rojo); }
+
+/* ---------- Mensajes ---------- */
+.mensaje {
+  padding: 1rem 0;
+  font-weight: 500;
+}
+
+.mensaje--error {
+  color: var(--rojo);
+}
+
+/* ---------- Pie de página ---------- */
+.pie {
+  background-color: var(--tinta);
+  color: #b9c9cf;
+  font-size: 0.9rem;
+}
+
+.pie a {
+  color: var(--portal);
+}

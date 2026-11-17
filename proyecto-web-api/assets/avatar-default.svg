@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Foto de perfil por defecto">
+  <!-- Fondo -->
+  <rect width="200" height="200" fill="#c9d6db"/>
+  <!-- Cuerpo -->
+  <path d="M30 200c0-44 31-72 70-72s70 28 70 72z" fill="#14232b"/>
+  <!-- Cabeza -->
+  <circle cx="100" cy="76" r="38" fill="#14232b"/>
+  <!-- Detalle verde portal -->
+  <circle cx="100" cy="76" r="38" fill="none" stroke="#39d98a" stroke-width="4"/>
+</svg>
